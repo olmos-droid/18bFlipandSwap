@@ -79,7 +79,7 @@
                 <TextView
                     android:id="@+id/texto"
                     android:layout_width="match_parent"
-                    android:layout_height="275dp"
+                    android:layout_height="350dp"
                     android:fontFamily="@font/spacemono_bold"
                     android:gravity="center"
                     android:text="@string/lighttext"
@@ -90,7 +90,7 @@
                 <ImageView
                     android:id="@+id/mechero2"
                     android:layout_width="wrap_content"
-                    android:layout_height="275dp"
+                    android:layout_height="350dp"
                     android:contentDescription="@string/mechero"
                     android:scaleType="centerCrop"
                     app:srcCompat="@drawable/mechero2" />

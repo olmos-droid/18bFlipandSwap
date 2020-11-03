@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">18b Flip and Swap</string>
+    <string name="mechero">mechero</string>
+    <string name="cadena">cadena</string>
+    <string name="pinza">pinza</string>
+    <string name="monedas">monedas</string>
+    <string name="ring">ring</string>
+</resources>

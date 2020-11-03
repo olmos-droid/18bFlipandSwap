@@ -22,12 +22,21 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:id="@+id/mechero"
+                    android:id="@+id/phone2"
                     android:layout_width="wrap_content"
                     android:layout_height="200dp"
-                    android:contentDescription="@string/mechero"
+                    android:contentDescription="@string/phones"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/mechero" />
+                    app:srcCompat="@drawable/phones2" />
+
+                <ImageView
+                    android:id="@+id/phone1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/phones"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/phones1" />
+
             </RelativeLayout>
 
             <RelativeLayout
@@ -36,12 +45,21 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:id="@+id/cadena"
-                    android:contentDescription="@string/cadena"
+                    android:id="@+id/olivas2"
                     android:layout_width="wrap_content"
                     android:layout_height="200dp"
+                    android:contentDescription="@string/olivas"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/cadena" />
+                    app:srcCompat="@drawable/oliva2" />
+
+                <ImageView
+                    android:id="@+id/olivas1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="200dp"
+                    android:contentDescription="@string/olivas"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/oliva1" />
+
             </RelativeLayout>
         </LinearLayout>
 
@@ -55,16 +73,28 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:background="#F44336">
+
+                <TextView
+                    android:id="@+id/texto"
+                    android:layout_width="match_parent"
+                    android:layout_height="275dp"
+                    android:fontFamily="@font/spacemono_bold"
+                    android:gravity="center"
+                    android:text="@string/lighttext"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorletra2"
+                    android:textSize="36sp" />
 
                 <ImageView
-                    android:id="@+id/pinza"
-                    android:contentDescription="@string/pinza"
+                    android:id="@+id/mechero2"
                     android:layout_width="wrap_content"
                     android:layout_height="275dp"
-                    android:layout_weight="1"
+                    android:contentDescription="@string/mechero"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/pinza" />
+                    app:srcCompat="@drawable/mechero2" />
+
             </RelativeLayout>
 
         </LinearLayout>
@@ -79,15 +109,24 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="2">
+                android:layout_weight="1">
 
                 <ImageView
-                    android:id="@+id/monedas"
+                    android:id="@+id/body1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:contentDescription="@string/monedas"
+                    android:contentDescription="@string/body"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/monedas" />
+                    app:srcCompat="@drawable/body1" />
+
+                <ImageView
+                    android:id="@+id/body2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/body"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/body2" />
+
             </RelativeLayout>
 
             <RelativeLayout
@@ -96,12 +135,20 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:id="@+id/ring"
+                    android:id="@+id/vaso1"
                     android:contentDescription="@string/ring"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/ring" />
+                    app:srcCompat="@drawable/vaso1" />
+                <ImageView
+                    android:id="@+id/vaso2"
+                    android:contentDescription="@string/ring"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/vaso2" />
+
             </RelativeLayout>
         </LinearLayout>
     </RelativeLayout>

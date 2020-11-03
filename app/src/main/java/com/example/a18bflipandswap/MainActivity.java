@@ -7,21 +7,36 @@ import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageView imageView1;
     private ImageView imageView2;
-    private ImageView imageView3;
+    private TextView textView1;
     private ImageView imageView4;
     private ImageView imageView5;
 
-    private boolean aBoolean = true;
+    private ImageView imageView6;
+    private ImageView imageView7;
+    private ImageView imageView8;
+    private ImageView imageView9;
+    private ImageView imageView10;
+
+    private AnimatorSet animatorSet;
+
+
+    private boolean aBoolean1 = true;
+    private boolean aBoolean2 = true;
+    private boolean aBoolean3 = true;
+    private boolean aBoolean4 = true;
+    private boolean aBoolean5 = true;
+
 
     ObjectAnimator objectAnimator1;
     ObjectAnimator objectAnimator2;
     ObjectAnimator objectAnimator3;
+    ObjectAnimator objectAnimator4;
 
 
     @Override
@@ -29,137 +44,162 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        imageView1 = (ImageView) findViewById(R.id.mechero);
-        imageView2 = (ImageView) findViewById(R.id.cadena);
-        imageView3 = (ImageView) findViewById(R.id.pinza);
-        imageView4 = (ImageView) findViewById(R.id.monedas);
-        imageView5 = (ImageView) findViewById(R.id.ring);
+        //hook
+        imageView1 = (ImageView) findViewById(R.id.phone1);
+        imageView6 = (ImageView) findViewById(R.id.phone2);
 
+        imageView2 = (ImageView) findViewById(R.id.olivas1);
+        imageView7 = (ImageView) findViewById(R.id.olivas2);
+
+        textView1 = (TextView) findViewById(R.id.texto);
+        imageView8 = (ImageView) findViewById(R.id.mechero2);
+
+        imageView4 = (ImageView) findViewById(R.id.body1);
+        imageView9 = (ImageView) findViewById(R.id.body2);
+
+        imageView5 = (ImageView) findViewById(R.id.vaso1);
+        imageView10 = (ImageView) findViewById(R.id.vaso2);
+
+
+
+
+        // imatges front
         imageView1.setOnClickListener(this);
         imageView2.setOnClickListener(this);
-        imageView3.setOnClickListener(this);
+        textView1.setOnClickListener(this);
         imageView4.setOnClickListener(this);
         imageView5.setOnClickListener(this);
+
+        // imatges back
+        imageView6.setOnClickListener(this);
+        imageView7.setOnClickListener(this);
+        imageView8.setOnClickListener(this);
+        imageView9.setOnClickListener(this);
+        imageView10.setOnClickListener(this);
 
 
     }
 
     @Override
     public void onClick(View v) {
-        Toast.makeText(getApplicationContext(), "mechoro tocat", Toast.LENGTH_SHORT);
-
         switch (v.getId()) {
 
-            case R.id.mechero:
-
-                if (aBoolean) {
-                    aBoolean = false;
-                    objectAnimator1 = ObjectAnimator.ofFloat(imageView1, "RotationY", 0f, 180f);
-                    objectAnimator1.setDuration(1000);
-                    objectAnimator2 = ObjectAnimator.ofFloat(imageView1, "RotationX", 0f, 180f);
-                    objectAnimator2.setDuration(1000);
-                    objectAnimator3 = ObjectAnimator.ofFloat(imageView1, "Alpha", 1, 0);
-                    objectAnimator3.setDuration(1000);
-                } else {
-                    aBoolean = true;
-                    objectAnimator1 = ObjectAnimator.ofFloat(imageView1, "RotationY", 180f, 0f);
-                    objectAnimator1.setDuration(1000);
-                    objectAnimator2 = ObjectAnimator.ofFloat(imageView1, "RotationX", 180f, 0f);
-                    objectAnimator2.setDuration(1000);
-                    objectAnimator3 = ObjectAnimator.ofFloat(imageView1, "Alpha", 0, 1);
-                    objectAnimator3.setDuration(1000);
-
-                }
+            case R.id.phone1:
+                aBoolean1 = animaFoto(imageView1, imageView6, aBoolean1);
                 break;
-
-            case R.id.cadena:
-
-                if (aBoolean) {
-                    aBoolean = false;
-                    objectAnimator1 = ObjectAnimator.ofFloat(imageView2, "RotationY", 0f, 180f);
-                    objectAnimator1.setDuration(1000);
-                    objectAnimator2 = ObjectAnimator.ofFloat(imageView2, "RotationX", 0f, 180f);
-                    objectAnimator2.setDuration(1000);
-                    objectAnimator3 = ObjectAnimator.ofFloat(imageView2, "Alpha", 1, 0);
-                    objectAnimator3.setDuration(1000);
-                } else {
-                    aBoolean = true;
-                    objectAnimator1 = ObjectAnimator.ofFloat(imageView2, "RotationY", 180f, 0f);
-                    objectAnimator1.setDuration(1000);
-                    objectAnimator2 = ObjectAnimator.ofFloat(imageView2, "RotationX", 180f, 0f);
-                    objectAnimator2.setDuration(1000);
-                    objectAnimator3 = ObjectAnimator.ofFloat(imageView2, "Alpha", 0,1);
-                    objectAnimator3.setDuration(1000);
-                }
+            case R.id.olivas1:
+                aBoolean2 = animaFoto(imageView2, imageView7, aBoolean2);
                 break;
-
-            case R.id.pinza:
-
-                if (aBoolean) {
-                    aBoolean = false;
-                    objectAnimator1 = ObjectAnimator.ofFloat(imageView3, "RotationY", 0f, 180f);
-                    objectAnimator1.setDuration(1000);
-                    objectAnimator2 = ObjectAnimator.ofFloat(imageView3, "RotationX", 0f, 180f);
-                    objectAnimator2.setDuration(1000);
-                    objectAnimator3 = ObjectAnimator.ofFloat(imageView3, "Alpha", 1,0);
-                    objectAnimator3.setDuration(1000);
-                } else {
-                    aBoolean = true;
-                    objectAnimator1 = ObjectAnimator.ofFloat(imageView3, "RotationY", 180f, 0f);
-                    objectAnimator1.setDuration(1000);
-                    objectAnimator2 = ObjectAnimator.ofFloat(imageView3, "RotationX", 180f, 0f);
-                    objectAnimator2.setDuration(1000);
-                    objectAnimator3 = ObjectAnimator.ofFloat(imageView3, "Alpha", 0, 1);
-                    objectAnimator3.setDuration(1000);
-                }
+            case R.id.mechero2:
+                aBoolean3=animaFoto2(imageView8,textView1,aBoolean3);
                 break;
-
-            case R.id.monedas:
-
-                if (aBoolean) {
-                    aBoolean = false;
-                    objectAnimator1 = ObjectAnimator.ofFloat(imageView4, "RotationY", 0f, 180f);
-                    objectAnimator1.setDuration(1000);
-                    objectAnimator2 = ObjectAnimator.ofFloat(imageView4, "RotationX", 0f, 180f);
-                    objectAnimator2.setDuration(1000);
-                    objectAnimator3 = ObjectAnimator.ofFloat(imageView4, "Alpha", 1, 0);
-                    objectAnimator3.setDuration(1000);
-                } else {
-                    aBoolean = true;
-                    objectAnimator1 = ObjectAnimator.ofFloat(imageView4, "RotationY", 180f, 0f);
-                    objectAnimator1.setDuration(1000);
-                    objectAnimator2 = ObjectAnimator.ofFloat(imageView4, "RotationX", 180f, 0f);
-                    objectAnimator2.setDuration(1000);
-                    objectAnimator3 = ObjectAnimator.ofFloat(imageView4, "Alpha", 0,1);
-                    objectAnimator3.setDuration(1000);
-                }
+            case R.id.body2:
+                aBoolean4=animaFoto3(imageView4,imageView9,aBoolean4);
                 break;
+            case R.id.vaso2:
+                aBoolean5=animaFoto3(imageView5,imageView10,aBoolean5);
 
-            case R.id.ring:
-                if (aBoolean) {
-                    aBoolean = false;
-                    objectAnimator1 = ObjectAnimator.ofFloat(imageView5, "RotationY", 0f, 180f);
-                    objectAnimator1.setDuration(1000);
-                    objectAnimator2 = ObjectAnimator.ofFloat(imageView5, "RotationX", 0f, 180f);
-                    objectAnimator2.setDuration(1000);
-                    objectAnimator3 = ObjectAnimator.ofFloat(imageView5, "Alpha", 1,0);
-                    objectAnimator3.setDuration(1000);
-                } else {
-                    aBoolean = true;
-                    objectAnimator1 = ObjectAnimator.ofFloat(imageView5, "RotationY", 180f, 0f);
-                    objectAnimator1.setDuration(1000);
-                    objectAnimator2 = ObjectAnimator.ofFloat(imageView5, "RotationX", 180f, 0f);
-                    objectAnimator2.setDuration(1000);
-                    objectAnimator3 = ObjectAnimator.ofFloat(imageView5, "Alpha", 0,1);
-                    objectAnimator3.setDuration(1000);
-                }
-                break;
         }
-        AnimatorSet animatorSet = new AnimatorSet();
-        animatorSet.playTogether(objectAnimator1, objectAnimator2, objectAnimator3);
+
+    }
+
+    private Boolean animaFoto(ImageView frontfoto, ImageView backfoto, Boolean aBoolean) {
+
+        if (aBoolean) {
+            aBoolean = false;
+            objectAnimator1 = ObjectAnimator.ofFloat(frontfoto, "RotationX", 0, 180);
+            objectAnimator1.setDuration(1000);
+            objectAnimator2 = ObjectAnimator.ofFloat(frontfoto, "Alpha", 1, 0);
+            objectAnimator2.setStartDelay(500);
+            objectAnimator2.setDuration(1);
+
+            objectAnimator3 = ObjectAnimator.ofFloat(backfoto, "RotationX", 0, 180);
+            objectAnimator3.setDuration(1000);
+            objectAnimator4 = ObjectAnimator.ofFloat(backfoto, "Alpha", 0, 1);
+            objectAnimator4.setStartDelay(500);
+            objectAnimator4.setDuration(1);
+
+
+        } else {
+            aBoolean = true;
+            objectAnimator1 = ObjectAnimator.ofFloat(frontfoto, "RotationX", 180, 0);
+            objectAnimator1.setDuration(1000);
+            objectAnimator2 = ObjectAnimator.ofFloat(frontfoto, "Alpha", 0, 1);
+            objectAnimator2.setStartDelay(500);
+
+            objectAnimator3 = ObjectAnimator.ofFloat(backfoto, "RotationX", 180, 0);
+            objectAnimator3.setDuration(1000);
+            objectAnimator4 = ObjectAnimator.ofFloat(backfoto, "Alpha", 1, 0);
+            objectAnimator4.setStartDelay(500);
+            objectAnimator4.setDuration(1);
+
+        }
+        animatorSet = new AnimatorSet();
+        animatorSet.playTogether(objectAnimator1, objectAnimator2, objectAnimator3, objectAnimator4);
         animatorSet.start();
-        animatorSet.resume();
+
+        return aBoolean;
+    }
+    private Boolean animaFoto2(ImageView frontfoto, TextView backfoto, Boolean aBoolean) {
+
+        if (aBoolean) {
+            aBoolean = false;
+            objectAnimator2 = ObjectAnimator.ofFloat(frontfoto, "Alpha", 1, 0.3f);
+            objectAnimator2.setDuration(1000);
+
+            objectAnimator4 = ObjectAnimator.ofFloat(backfoto, "Alpha", 0, 1);
+            objectAnimator4.setDuration(1000);
 
 
+        } else {
+            aBoolean = true;
+            objectAnimator2 = ObjectAnimator.ofFloat(frontfoto, "Alpha", 0.3f, 1);
+            objectAnimator2.setDuration(1000);
+
+            objectAnimator4 = ObjectAnimator.ofFloat(backfoto, "Alpha", 1, 0);
+            objectAnimator4.setDuration(1000);
+        }
+        animatorSet = new AnimatorSet();
+        animatorSet.playTogether(objectAnimator2, objectAnimator4);
+        animatorSet.start();
+
+        return aBoolean;
+    }
+    private Boolean animaFoto3(ImageView frontfoto, ImageView backfoto, Boolean aBoolean) {
+
+        if (aBoolean) {
+            aBoolean = false;
+            objectAnimator1 = ObjectAnimator.ofFloat(frontfoto, "RotationY", 0, 180);
+            objectAnimator1.setDuration(1000);
+            objectAnimator2 = ObjectAnimator.ofFloat(frontfoto, "Alpha", 1, 0);
+            objectAnimator2.setStartDelay(500);
+            objectAnimator2.setDuration(1);
+
+            objectAnimator3 = ObjectAnimator.ofFloat(backfoto, "RotationY", 0, 180);
+            objectAnimator3.setDuration(1000);
+            objectAnimator4 = ObjectAnimator.ofFloat(backfoto, "Alpha", 0, 1);
+            objectAnimator4.setStartDelay(500);
+            objectAnimator4.setDuration(1);
+
+
+        } else {
+            aBoolean = true;
+            objectAnimator1 = ObjectAnimator.ofFloat(frontfoto, "RotationY", 180, 0);
+            objectAnimator1.setDuration(1000);
+            objectAnimator2 = ObjectAnimator.ofFloat(frontfoto, "Alpha", 0, 1);
+            objectAnimator2.setStartDelay(500);
+
+            objectAnimator3 = ObjectAnimator.ofFloat(backfoto, "RotationY", 180, 0);
+            objectAnimator3.setDuration(1000);
+            objectAnimator4 = ObjectAnimator.ofFloat(backfoto, "Alpha", 1, 0);
+            objectAnimator4.setStartDelay(500);
+            objectAnimator4.setDuration(1);
+
+        }
+        animatorSet = new AnimatorSet();
+        animatorSet.playTogether(objectAnimator1, objectAnimator2, objectAnimator3, objectAnimator4);
+        animatorSet.start();
+
+        return aBoolean;
     }
 }

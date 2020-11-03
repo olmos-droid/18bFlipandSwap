@@ -5,4 +5,10 @@
     <string name="pinza">pinza</string>
     <string name="monedas">monedas</string>
     <string name="ring">ring</string>
+    <string name="cigarro">cigarro</string>
+    <string name="auriculares">auriculares</string>
+    <string name="body">body</string>
+    <string name="phones">phones</string>
+    <string name="olivas">olivas</string>
+    <string name="lighttext">Light My Fire</string>
 </resources>

@@ -11,145 +11,163 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/linear1"
+            android:id="@+id/linearvertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <RelativeLayout
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/phone2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/phones"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/phones2" />
+
+                    <ImageView
+                        android:id="@+id/phone1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/phones"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/phones1" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/olivas2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/olivas"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/oliva2" />
+
+                    <ImageView
+                        android:id="@+id/olivas1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/olivas"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/oliva1" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#F44336"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/texto"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/spacemono_bold"
+                        android:gravity="center"
+                        android:text="@string/lighttext"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="36sp" />
+
+                    <ImageView
+                        android:id="@+id/mechero2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/mechero"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/mechero2" />
+
+                    <ImageView
+                        android:id="@+id/mechero1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/mechero" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="2"
+                android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/phone2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
-                    android:contentDescription="@string/phones"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/phones2" />
-
-                <ImageView
-                    android:id="@+id/phone1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
-                    android:contentDescription="@string/phones"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/phones1" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:id="@+id/olivas2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
-                    android:contentDescription="@string/olivas"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/oliva2" />
-
-                <ImageView
-                    android:id="@+id/olivas1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="200dp"
-                    android:contentDescription="@string/olivas"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/oliva1" />
-
-            </RelativeLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linear2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/linear1"
-            android:orientation="horizontal">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#F44336">
-
-                <TextView
-                    android:id="@+id/texto"
+                <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="350dp"
-                    android:fontFamily="@font/spacemono_bold"
-                    android:gravity="center"
-                    android:text="@string/lighttext"
-                    android:textAlignment="center"
-                    android:textColor="@color/colorletra2"
-                    android:textSize="36sp" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
 
-                <ImageView
-                    android:id="@+id/mechero2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="350dp"
-                    android:contentDescription="@string/mechero"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/mechero2" />
+                    <ImageView
+                        android:id="@+id/body1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/body"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/body1" />
 
-            </RelativeLayout>
+                    <ImageView
+                        android:id="@+id/body2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/body"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/body2" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/vaso1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/ring"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/vaso1" />
+
+                    <ImageView
+                        android:id="@+id/vaso2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/ring"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/vaso2" />
+
+                </RelativeLayout>
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/linear3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/linear2"
-            android:orientation="horizontal">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:id="@+id/body1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:contentDescription="@string/body"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/body1" />
-
-                <ImageView
-                    android:id="@+id/body2"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:contentDescription="@string/body"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/body2" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:id="@+id/vaso1"
-                    android:contentDescription="@string/ring"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/vaso1" />
-                <ImageView
-                    android:id="@+id/vaso2"
-                    android:contentDescription="@string/ring"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    app:srcCompat="@drawable/vaso2" />
-
-            </RelativeLayout>
-        </LinearLayout>
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

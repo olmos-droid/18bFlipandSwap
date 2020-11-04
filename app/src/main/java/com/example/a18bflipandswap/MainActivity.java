@@ -11,9 +11,11 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private TextView textView1;
+
     private ImageView imageView1;
     private ImageView imageView2;
-    private TextView textView1;
+    private ImageView imageView3;
     private ImageView imageView4;
     private ImageView imageView5;
 
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageView7 = (ImageView) findViewById(R.id.olivas2);
 
         textView1 = (TextView) findViewById(R.id.texto);
+        imageView3 = (ImageView) findViewById(R.id.mechero1);
         imageView8 = (ImageView) findViewById(R.id.mechero2);
 
         imageView4 = (ImageView) findViewById(R.id.body1);
@@ -59,8 +62,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         imageView5 = (ImageView) findViewById(R.id.vaso1);
         imageView10 = (ImageView) findViewById(R.id.vaso2);
-
-
 
 
         // imatges front
@@ -91,13 +92,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 aBoolean2 = animaFoto(imageView2, imageView7, aBoolean2);
                 break;
             case R.id.mechero2:
-                aBoolean3=animaFoto2(imageView8,textView1,aBoolean3);
+                aBoolean3 = animaFoto2(imageView8, imageView3, textView1, aBoolean3);
                 break;
             case R.id.body2:
-                aBoolean4=animaFoto3(imageView4,imageView9,aBoolean4);
+                aBoolean4 = animaFoto3(imageView9, imageView4, aBoolean4);
                 break;
             case R.id.vaso2:
-                aBoolean5=animaFoto3(imageView5,imageView10,aBoolean5);
+                aBoolean5 = animaFoto3(imageView10, imageView5, aBoolean5);
 
         }
 
@@ -140,11 +141,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         return aBoolean;
     }
-    private Boolean animaFoto2(ImageView frontfoto, TextView backfoto, Boolean aBoolean) {
+
+    private Boolean animaFoto2(ImageView back, ImageView front, TextView backfoto, Boolean aBoolean) {
 
         if (aBoolean) {
             aBoolean = false;
-            objectAnimator2 = ObjectAnimator.ofFloat(frontfoto, "Alpha", 1, 0.3f);
+            objectAnimator3 = ObjectAnimator.ofFloat(front, "Alpha", 1, 0);
+            objectAnimator3.setDuration(1000);
+
+            objectAnimator2 = ObjectAnimator.ofFloat(back, "Alpha", 1, 0.3f);
             objectAnimator2.setDuration(1000);
 
             objectAnimator4 = ObjectAnimator.ofFloat(backfoto, "Alpha", 0, 1);
@@ -153,51 +158,57 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         } else {
             aBoolean = true;
-            objectAnimator2 = ObjectAnimator.ofFloat(frontfoto, "Alpha", 0.3f, 1);
+            objectAnimator3 = ObjectAnimator.ofFloat(front, "Alpha", 0, 1);
+            objectAnimator3.setDuration(1000);
+
+            objectAnimator2 = ObjectAnimator.ofFloat(back, "Alpha", 0.3f, 1);
             objectAnimator2.setDuration(1000);
 
             objectAnimator4 = ObjectAnimator.ofFloat(backfoto, "Alpha", 1, 0);
             objectAnimator4.setDuration(1000);
         }
         animatorSet = new AnimatorSet();
-        animatorSet.playTogether(objectAnimator2, objectAnimator4);
+        animatorSet.playTogether(objectAnimator2, objectAnimator3, objectAnimator4);
         animatorSet.start();
 
         return aBoolean;
     }
+
     private Boolean animaFoto3(ImageView frontfoto, ImageView backfoto, Boolean aBoolean) {
 
         if (aBoolean) {
             aBoolean = false;
-            objectAnimator1 = ObjectAnimator.ofFloat(frontfoto, "RotationY", 0, 180);
-            objectAnimator1.setDuration(1000);
+//            objectAnimator1 = ObjectAnimator.ofFloat(frontfoto, "RotationY", 0, 180);
+//            objectAnimator1.setDuration(1000);
             objectAnimator2 = ObjectAnimator.ofFloat(frontfoto, "Alpha", 1, 0);
             objectAnimator2.setStartDelay(500);
-            objectAnimator2.setDuration(1);
+            objectAnimator2.setDuration(1000);
 
-            objectAnimator3 = ObjectAnimator.ofFloat(backfoto, "RotationY", 0, 180);
-            objectAnimator3.setDuration(1000);
+//            objectAnimator3 = ObjectAnimator.ofFloat(backfoto, "RotationY", 0, 180);
+//            objectAnimator3.setDuration(1000);
             objectAnimator4 = ObjectAnimator.ofFloat(backfoto, "Alpha", 0, 1);
             objectAnimator4.setStartDelay(500);
-            objectAnimator4.setDuration(1);
+            objectAnimator4.setDuration(1000);
 
 
         } else {
             aBoolean = true;
-            objectAnimator1 = ObjectAnimator.ofFloat(frontfoto, "RotationY", 180, 0);
-            objectAnimator1.setDuration(1000);
+//            objectAnimator1 = ObjectAnimator.ofFloat(frontfoto, "RotationY", 180, 0);
+//            objectAnimator1.setDuration(1000);
             objectAnimator2 = ObjectAnimator.ofFloat(frontfoto, "Alpha", 0, 1);
             objectAnimator2.setStartDelay(500);
+            objectAnimator2.setDuration(1000);
 
-            objectAnimator3 = ObjectAnimator.ofFloat(backfoto, "RotationY", 180, 0);
-            objectAnimator3.setDuration(1000);
+
+//            objectAnimator3 = ObjectAnimator.ofFloat(backfoto, "RotationY", 180, 0);
+//            objectAnimator3.setDuration(1000);
             objectAnimator4 = ObjectAnimator.ofFloat(backfoto, "Alpha", 1, 0);
             objectAnimator4.setStartDelay(500);
-            objectAnimator4.setDuration(1);
+            objectAnimator4.setDuration(1000);
 
         }
         animatorSet = new AnimatorSet();
-        animatorSet.playTogether(objectAnimator1, objectAnimator2, objectAnimator3, objectAnimator4);
+        animatorSet.playTogether(objectAnimator2, objectAnimator4);
         animatorSet.start();
 
         return aBoolean;

@@ -11,38 +11,17 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:id="@+id/linearvertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/linear1"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_weight="2"
                 android:orientation="vertical">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <ImageView
-                        android:id="@+id/olivas2"
-                        android:layout_width="200dp"
-                        android:layout_height="wrap_content"
-                        android:contentDescription="@string/olivas"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/oliva2" />
-
-                    <ImageView
-                        android:id="@+id/olivas1"
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
-                        android:contentDescription="@string/olivas"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/oliva1" />
-
-                </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -51,15 +30,15 @@
 
                     <ImageView
                         android:id="@+id/phone2"
-                        android:layout_width="200dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:contentDescription="@string/phones"
                         android:scaleType="centerCrop"
                         app:srcCompat="@drawable/phones2" />
 
                     <ImageView
                         android:id="@+id/phone1"
-                        android:layout_width="200dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:contentDescription="@string/phones"
                         android:scaleType="centerCrop"
@@ -67,23 +46,46 @@
 
                 </RelativeLayout>
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/olivas2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/olivas"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/oliva2" />
+
+                    <ImageView
+                        android:id="@+id/olivas1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/olivas"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/oliva1" />
+
+                </RelativeLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/linear2"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
                 android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="#F44336">
+                    android:background="#F44336"
+                    android:gravity="center_vertical">
 
                     <TextView
                         android:id="@+id/texto"
-                        android:layout_width="350dp"
+                        android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fontFamily="@font/spacemono_bold"
                         android:gravity="center"
@@ -94,11 +96,18 @@
 
                     <ImageView
                         android:id="@+id/mechero2"
-                        android:layout_width="350dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:contentDescription="@string/mechero"
                         android:scaleType="centerCrop"
                         app:srcCompat="@drawable/mechero2" />
+
+                    <ImageView
+                        android:id="@+id/mechero1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/mechero" />
 
                 </RelativeLayout>
 
@@ -107,41 +116,19 @@
             <LinearLayout
                 android:id="@+id/linear3"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
                 android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1">
-
-                    <ImageView
-                        android:id="@+id/vaso1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:contentDescription="@string/ring"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/vaso1" />
-
-                    <ImageView
-                        android:id="@+id/vaso2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:contentDescription="@string/ring"
-                        android:scaleType="centerCrop"
-                        app:srcCompat="@drawable/vaso2" />
-
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1">
 
                     <ImageView
                         android:id="@+id/body1"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:contentDescription="@string/body"
                         android:scaleType="centerCrop"
                         app:srcCompat="@drawable/body1" />
@@ -149,13 +136,35 @@
                     <ImageView
                         android:id="@+id/body2"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:contentDescription="@string/body"
                         android:scaleType="centerCrop"
                         app:srcCompat="@drawable/body2" />
 
                 </RelativeLayout>
 
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/vaso1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/ring"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/vaso1" />
+
+                    <ImageView
+                        android:id="@+id/vaso2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/ring"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/vaso2" />
+
+                </RelativeLayout>
             </LinearLayout>
 
         </LinearLayout>

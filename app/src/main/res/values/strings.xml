@@ -1,14 +1,10 @@
 <resources>
     <string name="app_name">18b Flip and Swap</string>
     <string name="mechero">mechero</string>
-    <string name="cadena">cadena</string>
-    <string name="pinza">pinza</string>
-    <string name="monedas">monedas</string>
-    <string name="ring">ring</string>
-    <string name="cigarro">cigarro</string>
     <string name="auriculares">auriculares</string>
     <string name="body">body</string>
     <string name="phones">phones</string>
     <string name="olivas">olivas</string>
     <string name="lighttext">Light My Fire</string>
+    <string name="vaso">vaso</string>
 </resources>
